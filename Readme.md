@@ -7,6 +7,9 @@ Que es Moogle?
 
 Es un buscador de documentos del formato *.txt, que dada una busqueda del usuario, devuelve los resultados mas relevantes de dicha busqueda en una base de datos (carpeta).
 
+
+El objetivo de Moogle! es realizar búsquedas en el interior de varios archivos .txt y en función del contenido de los mismos, mostrar los resultados más relevantes de acuerdo a la búsqueda que usted haya realizado. Para esto, usted debe copiar los archivos .txt a los cuales quiera realizarle la búsqueda en la carpeta Content que aparece en la raiz del proyecto. La cantidad mínima de archivos .txt que el proyecto debe tener en la carpeta Content para funcionar de manera correcta es de 2 archivos. Los cuales ya se encuentran en dicha carpeta. (Siéntase libre de borrarlos y copiar sus propios archivos .txt, el código está preparado para trabajar con cualquier archivo .txt que usted provea, mientras la cantidad mínima de estos sean 2). En cuanto a la cantidad máxima no debería tener ningún problema.
+
 Como ejecutar el Moogle?
 
 Para poder ejecutar el proyecto:
@@ -27,9 +30,9 @@ dotnet watch run --project MoogleServer
 
 3 Abrir en el navegador la direccion que ofrece
 
-Como Funciona?
+##Como Funciona?
 
-Clase Archivo 
+#Clase Archivo 
 
 Se utiliza para representar documentos en un motor de búsqueda. Mediante procesos de calculos logramos extraer informacion de la base de datos que nos seran utiles y esa informacion la devolvemos en un metodo que se llama TF_IDF que contiene la informacion escencial para realizar la busqueda.Para hacer ésto comienza representando cada documento como un vector que almacena solo la informacion necesaria para realizar las búsquedas. Los documentos son normalizados eliminando caracteres complejos de entender por el compilador, los espacios y las tildes, obteniendo solamente la lista de palabras de cada documento. Luego se realiza el cálculo del TF(Termine Frequence) y del IDF(Inverse Document Frequence).
 
@@ -60,5 +63,3 @@ La idea detrás de IDF es que los términos raros son más importantes para la c
 La combinación de TF y IDF se conoce como TF-IDF. TF-IDF es una medida de la importancia relativa de un término en un documento o en una consulta en el contexto de un corpus de documentos. Se calcula multiplicando la frecuencia de término (TF) por la frecuencia inversa de documento (IDF):
 
 En nuestro motor de búsqueda lo utilizamos para medir la relevancia de los documentos en función de las consultas de los usuarios. Se calcula el valor de TF-IDF para todos los términos en la consulta y en cada documento en la colección, y se devuelve una lista de documentos ordenados por su similitud con la consulta.
-
-El objetivo de Moogle! es realizar búsquedas en el interior de varios archivos .txt y en función del contenido de los mismos, mostrar los resultados más relevantes de acuerdo a la búsqueda que usted haya realizado. Para esto, usted debe copiar los archivos .txt a los cuales quiera realizarle la búsqueda en la carpeta Content que aparece en la raiz del proyecto. La cantidad mínima de archivos .txt que el proyecto debe tener en la carpeta Content para funcionar de manera correcta es de 2 archivos. Los cuales ya se encuentran en dicha carpeta. (Siéntase libre de borrarlos y copiar sus propios archivos .txt, el código está preparado para trabajar con cualquier archivo .txt que usted provea, mientras la cantidad mínima de estos sean 2). En cuanto a la cantidad máxima no debería tener ningún problema.
