@@ -1,7 +1,8 @@
-Proyecto de Programacion I
-Facultad de Matematica y Computacion ' Universidad de La Habana
-Curso 2022-2023
-Alex Daniel Arbolaez Sabater C121
+[![MOOGLE](./Captura.png)]
+>Proyecto de Programacion I
+>Facultad de Matematica y Computacion ' Universidad de La Habana
+>Curso 2022-2023
+>Alex Daniel Arbolaez Sabater C121
 
 Que es Moogle?
 
