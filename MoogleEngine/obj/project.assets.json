@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "B:\\CC\\!Moogle\\MoogleEngine\\MoogleEngine.csproj",
+      "projectUniqueName": "B:\\Escuela\\!Moogle\\MoogleEngine\\MoogleEngine.csproj",
       "projectName": "MoogleEngine",
-      "projectPath": "B:\\CC\\!Moogle\\MoogleEngine\\MoogleEngine.csproj",
+      "projectPath": "B:\\Escuela\\!Moogle\\MoogleEngine\\MoogleEngine.csproj",
       "packagesPath": "C:\\Users\\Alex Daniel\\.nuget\\packages\\",
-      "outputPath": "B:\\CC\\!Moogle\\MoogleEngine\\obj\\",
+      "outputPath": "B:\\Escuela\\!Moogle\\MoogleEngine\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Users\\Alex Daniel\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder"

@@ -4,10 +4,10 @@ public class Motor
 {
 
     Carpeta biblioteca { get; set; }
-    string Ruta = @"B:\CC\!Moogle\";
+    string Ruta = @"..\";
     public Motor()
     {
-        biblioteca = new Carpeta(@"B:\CC\!Moogle");
+        biblioteca = new Carpeta(Ruta);
     }
     public Dictionary<string, float> GetTFIDF(string[] query)
     {
@@ -137,7 +137,7 @@ public class Motor
         {
             if (similitudes[i].score != 0)
             {
-                StreamReader lector = new StreamReader(Ruta + @"Content\\"+ similitudes[i].titulo + ".txt");
+                StreamReader lector = new StreamReader(@"..\Content\" + similitudes[i].titulo + ".txt");
                 string contenido = lector.ReadToEnd();
                 contenido = contenido.Substring(0,Math.Min(500,contenido.Length));
                 resultado.Add(new SearchItem(similitudes[i].titulo, contenido,similitudes[i].score));
