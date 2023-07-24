@@ -1,4 +1,4 @@
-![](./Captura.png)
+![](./Presentacion/Moogle.jpg)
 >Proyecto de Programacion I
 >Facultad de Matematica y Computación Universidad de La Habana
 >Curso 2022-2023
