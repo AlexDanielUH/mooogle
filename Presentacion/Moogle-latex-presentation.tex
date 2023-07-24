@@ -1,0 +1,114 @@
+\documentclass{beamer}
+% Configuración de la presentación
+\usetheme{Hannover}
+\usecolortheme{dolphin}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+% Paquetes necesarios
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{tikz}
+\usetikzlibrary{fadings}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{calc}
+
+% Título de la presentación
+\title{Moogle}
+\subtitle{...Encuentra respuestas en un abrir y cerrar de ojos...}
+
+% Autor y afiliación
+\author{Alex Daniel Arbolaez}
+\institute{Universidad de la Habana}
+
+% Fecha de la presentación
+\date{2023}
+
+\begin{document}
+\addtobeamertemplate{background canvas}{}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[opacity=0.5, at=(current page.south east), anchor=south east] {
+            \includegraphics[width=2cm,height=2cm,keepaspectratio]{matcom.png} % Reemplaza 'matcom.png' con la ubicación del archivo de imagen del logo
+        };
+    \end{tikzpicture}
+}
+% Página de título
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Moogle}
+
+\begin{center}
+\begin{tikzpicture}
+
+\node (moogle) at (0,0) {\includegraphics[width=5cm]{Moogle.jpg}};
+\draw [ultra thick, white] ($(moogle.south west) + (0.2,0.2)$) rectangle ($(moogle.north east) - (0.2,0.2)$);
+\node (caption) at (0,-3) {\large Una imagen del buscador Moogle};
+%\draw [->, line width=0.5mm, blue] ($(caption.north) + (0,0.2)$) -- ($(moogle.south) + (0,-0.2)$);
+
+\end{tikzpicture}
+\end{center}	
+
+\end{frame}
+
+% Índice
+\begin{frame}{Índice}
+  \tableofcontents
+\end{frame}
+
+% Sección 1: Proceso de búsqueda
+\section{Qu\'e es Moogle}
+
+\begin{frame}{Qu\'e es Moogle}
+  \begin{enumerate}
+    \item Es un buscador de documentos del formato *.txt, que dada una
+busqueda del usuario, devuelve los resultados mas relevantes de dicha
+busqueda en una base de datos (carpeta).
+  
+  \end{enumerate}
+\end{frame}
+
+% Sección 2: Herramientas utilizadas
+\section{Herramientas utilizadas}
+
+\begin{frame}{Herramientas utilizadas}
+  \begin{itemize}
+    \item \textbf{Clase Archivo}:Se utiliza para representar documentos en un motor de b\'usqueda.
+    \item \textbf{Clase Moogle}: \'Esta clase es el n\'ucleo de la funcionalidad del motor de b\'usqueda y 
+se encarga de coordinar los diferentes componentes del programa. El
+m\'etodo \texttt{"}Query\texttt{"} se encarga de realizar la b\'usqueda.
+    \item \textbf{Distancia de Levenshtein}: medida de distancia entre dos cadenas de caracteres.
+    \item \textbf{Clase Tools}: Esta contiene una serie de funciones las cuales son necesarias para
+lograr un mejor ecosistema del proyecto y poder actualizar y mejorar sin da\~nar la infraestructura del proyecto.
+  \end{itemize}
+\end{frame}
+
+% Sección 3: Proceso de creación del buscador
+\section{¿Qu\'e es el modelo vectorial?}
+
+\begin{frame}{¿Qu\'e es el modelo vectorial?}
+  \begin{itemize}
+    \item El modelo
+vectorial es una t\'ecnica de recuperaci\'on de informaci\'on que representa documentos y consultas como vectores en un espacio vectorial,
+donde cada dimensi\'on corresponde a un t\'ermino del vocabulario del
+corpus. Esta t\'ecnica es \'util porque permite medir la similitud entre
+vectores para determinar la relevancia de los documentos para una
+consulta dada. La combinaci\'on de TF y IDF se conoce
+como TF-IDF. TF-IDF es una medida de la importancia relativa de
+un t\'ermino en un documento o en una consulta en el contexto de
+un corpus de documentos.
+  \end{itemize}
+\end{frame}
+
+% Página de agradecimientos
+\begin{frame}{¡Gracias por su atención!}
+  \begin{center}
+    \Large FIN
+  \end{center}
+\end{frame}
+
+\end{document}  
